@@ -15,7 +15,7 @@ def has_upper_letters(password):
 
 
 def has_symbols(password):
-    return any(char in "!@#$%^&*()-_=+" for char in password)
+    return any(not (char.isdigit() or char.isalpha()) for char in password)
 
 
 checks = [
